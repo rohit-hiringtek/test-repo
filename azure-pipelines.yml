@@ -1,7 +1,4 @@
 # Starter pipeline
-- task: TestTask@0
-  inputs:
-    samplestring: 'Hello'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -13,6 +10,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
+- task: TestTask@0
+  inputs:
+    samplestring: 'Hello'
+    
 - script: echo "Readme.md Updated!"
   displayName: 'Run a one-line script'
 
